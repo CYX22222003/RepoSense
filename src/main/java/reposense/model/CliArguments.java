@@ -505,6 +505,9 @@ public class CliArguments {
             return this;
         }
 
+        /**
+         * Sets up the pretty printing indicator of CliArguments.
+         */
         public Builder checkPrettyPrintingUsed(boolean isPrettyPrintingUse) {
             this.cliArguments.isPrettyPrintingUsed = isPrettyPrintingUse;
             return this;
