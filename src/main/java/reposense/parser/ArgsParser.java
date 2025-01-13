@@ -80,6 +80,8 @@ public class ArgsParser {
     public static final String[] ANALYZE_AUTHORSHIP_FLAGS = new String[] {"--analyze-authorship", "-A"};
     public static final String[] ORIGINALITY_THRESHOLD_FLAGS = new String[] {"--originality-threshold", "-ot"};
 
+    public static final String[] JSON_PRINT_MODE_FLAGS = new String[] {"--use-json-pretty-printing", "-j"};
+
     private static final Logger logger = LogsManager.getLogger(ArgsParser.class);
 
     private static final String PROGRAM_USAGE = "java -jar RepoSense.jar";
@@ -272,6 +274,11 @@ public class ArgsParser {
                 .setDefault(DEFAULT_NUM_ANALYSIS_THREADS)
                 .help(FeatureControl.SUPPRESS);
 
+        parser.addArgument(JSON_PRINT_MODE_FLAGS)
+                .dest(JSON_PRINT_MODE_FLAGS[0])
+                .action(Arguments.storeTrue())
+                .help("A flag to use json pretty printing when generating the json files.");
+
         // Testing flags
         argumentGroup.addArgument(TEST_MODE_FLAG)
                 .dest(TEST_MODE_FLAG[0])
@@ -322,7 +329,7 @@ public class ArgsParser {
         double originalityThreshold = results.get(ORIGINALITY_THRESHOLD_FLAGS[0]);
         int numCloningThreads = results.get(CLONING_THREADS_FLAG[0]);
         int numAnalysisThreads = results.get(ANALYSIS_THREADS_FLAG[0]);
-
+        boolean isJsonPrettyPrintingUsed = results.get(JSON_PRINT_MODE_FLAGS[0]);
         CliArguments.Builder cliArgumentsBuilder = new CliArguments.Builder()
                 .configFolderPath(configFolderPath)
                 .reportDirectoryPath(reportFolderPath)
@@ -340,7 +347,8 @@ public class ArgsParser {
                 .numAnalysisThreads(numAnalysisThreads)
                 .isTestMode(isTestMode)
                 .isAuthorshipAnalyzed(isAuthorshipAnalyzed)
-                .originalityThreshold(originalityThreshold);
+                .originalityThreshold(originalityThreshold)
+                .checkPrettyPrintingUsed(isJsonPrettyPrintingUsed);
 
         LogsManager.setLogFolderLocation(outputFolderPath);
 

@@ -1,0 +1,96 @@
+1月 13, 2025 1:47:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: repo
+1月 13, 2025 1:47:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: ../path/to/repo
+1月 13, 2025 1:47:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /path/to/repo
+1月 13, 2025 1:47:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: path/to/repo/.git
+1月 13, 2025 1:47:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: file://path/to/repo.git
+1月 13, 2025 1:47:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: file://path/to/repo
+1月 13, 2025 1:47:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: file:///path/to/repo
+1月 13, 2025 1:47:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: path\to\repo
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: ..\path\to\repo
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: path\to\repo\.git
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: C:\path\to\repo.git
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: ..\path/to\repo
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: file://path\to\repo.git
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: C:\path/to/repo.git
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /path/with/redundant/directories/../.././../to/repo
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: path/with/redundant/directories/../../../../../to/repo
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 1:47:59 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: ../path/to/repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /path/to/repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: path/to/repo/.git
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: file://path/to/repo.git
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: file://path/to/repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: file:///path/to/repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: path\to\repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: ..\path\to\repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: path\to\repo\.git
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: C:\path\to\repo.git
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: ..\path/to\repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: file://path\to\repo.git
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: C:\path/to/repo.git
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /path/with/redundant/directories/../.././../to/repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: path/with/redundant/directories/../../../../../to/repo
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense
+1月 13, 2025 5:13:58 下午 reposense.git.GitRemote getRemotes
+警告: Unable to run git remote command in directory: /Users/sikai/RepoSense

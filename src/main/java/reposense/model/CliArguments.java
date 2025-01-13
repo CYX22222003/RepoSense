@@ -53,6 +53,12 @@ public class CliArguments {
     private ReportConfiguration reportConfiguration;
     private BlurbMap blurbMap;
 
+    protected boolean isPrettyPrintingUsed;
+
+    public boolean isPrettyPrintingUsed() {
+        return isPrettyPrintingUsed;
+    }
+
     /**
      * Constructs a {@code CliArguments} object without any parameters.
      */
@@ -500,6 +506,11 @@ public class CliArguments {
          */
         public Builder blurbMap(BlurbMap blurbMap) {
             this.cliArguments.blurbMap = blurbMap;
+            return this;
+        }
+
+        public Builder checkPrettyPrintingUsed(boolean isPrettyPrintingUse) {
+            this.cliArguments.isPrettyPrintingUsed = isPrettyPrintingUse;
             return this;
         }
 

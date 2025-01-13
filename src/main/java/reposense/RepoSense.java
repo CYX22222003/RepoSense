@@ -43,6 +43,7 @@ public class RepoSense {
         try {
             TimeUtil.startTimer();
             CliArguments cliArguments = ArgsParser.parse(args);
+            FileUtil.setPrettyPrintingMode(cliArguments.isPrettyPrintingUsed());
             List<RepoConfiguration> configs = null;
             ReportConfiguration reportConfig = new ReportConfiguration();
             BlurbMap blurbMap = new BlurbMap();
