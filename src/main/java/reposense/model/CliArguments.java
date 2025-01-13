@@ -18,7 +18,7 @@ import reposense.parser.ReportConfigJsonParser;
  */
 public class CliArguments {
     private static final Path EMPTY_PATH = Paths.get("");
-
+    protected boolean isPrettyPrintingUsed;
     private Path outputFilePath;
     private Path assetsFilePath;
     private LocalDateTime sinceDate;
@@ -39,12 +39,9 @@ public class CliArguments {
     private double originalityThreshold;
     private boolean isTestMode = ArgsParser.DEFAULT_IS_TEST_MODE;
     private boolean isFreshClonePerformed = ArgsParser.DEFAULT_SHOULD_FRESH_CLONE;
-
     private List<String> locations;
     private boolean isViewModeOnly;
-
     private Path reportDirectoryPath;
-
     private Path configFolderPath;
     private Path repoConfigFilePath;
     private Path authorConfigFilePath;
@@ -53,16 +50,15 @@ public class CliArguments {
     private ReportConfiguration reportConfiguration;
     private BlurbMap blurbMap;
 
-    protected boolean isPrettyPrintingUsed;
+    /**
+     * Constructs a {@code CliArguments} object without any parameters.
+     */
+    private CliArguments() {
+    }
 
     public boolean isPrettyPrintingUsed() {
         return isPrettyPrintingUsed;
     }
-
-    /**
-     * Constructs a {@code CliArguments} object without any parameters.
-     */
-    private CliArguments() {}
 
     public ZoneId getZoneId() {
         return zoneId;
