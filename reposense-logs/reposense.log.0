@@ -1,86 +1,74 @@
-Feb 20, 2025 7:48:55 AM reposense.system.LogsManager addFileHandler
+Feb 17, 2025 2:25:34 AM reposense.system.LogsManager addFileHandler
 INFO: Log temp folder has been successfully created
-Feb 20, 2025 7:48:55 AM reposense.parser.ArgsParser parse
+Feb 17, 2025 2:25:34 AM reposense.parser.ArgsParser parse
 INFO: Config path not provided, using the config folder as default.
-Feb 20, 2025 7:48:55 AM reposense.parser.BlurbMarkdownParser parse
+Feb 17, 2025 2:25:34 AM reposense.parser.BlurbMarkdownParser parse
 INFO: Parsing Blurbs...
-Feb 20, 2025 7:48:55 AM reposense.parser.BlurbMarkdownParser parse
+Feb 17, 2025 2:25:34 AM reposense.parser.BlurbMarkdownParser parse
 INFO: Blurbs parsed successfully!
-Feb 20, 2025 7:48:55 AM reposense.parser.CsvParser validateHeader
+Feb 17, 2025 2:25:34 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  Ignore Commits List
-Feb 20, 2025 7:48:55 AM reposense.parser.CsvParser validateHeader
+Feb 17, 2025 2:25:34 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Author's Emails,  Repository's Location,  Branch,  Author's Git Host ID,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-Feb 20, 2025 7:48:55 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Feb 17, 2025 2:25:34 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias skyblaise found. The alias will belong to the last author - skyblaise
-Feb 20, 2025 7:48:55 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Feb 17, 2025 2:25:34 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias luo zhijie found. The alias will belong to the last author - luozhijie-tom
-Feb 20, 2025 7:48:55 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Feb 17, 2025 2:25:34 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias skyblaise found. The alias will belong to the last author - skyblaise
-Feb 20, 2025 7:48:55 AM reposense.model.AuthorConfiguration checkDuplicateAliases
+Feb 17, 2025 2:25:34 AM reposense.model.AuthorConfiguration checkDuplicateAliases
 WARNING: Duplicate alias luo zhijie found. The alias will belong to the last author - luozhijie-tom
-Feb 20, 2025 7:48:55 AM reposense.parser.CsvParser validateHeader
+Feb 17, 2025 2:25:34 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, group-config.csv, and recognized columns: Globs,  Repository's Location,  Group Name
-Feb 20, 2025 7:48:55 AM reposense.report.RepoCloner spawnCloneProcess
+Feb 17, 2025 2:25:34 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/reposense/testrepo-Delta.git...
-Feb 20, 2025 7:48:55 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://bitbucket.org/skyblaise/testrepo-bitbucket.git...
-Feb 20, 2025 7:48:55 AM reposense.report.RepoCloner spawnCloneProcess
+Feb 17, 2025 2:25:34 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code...
-Feb 20, 2025 7:48:55 AM reposense.report.RepoCloner spawnCloneProcess
+Feb 17, 2025 2:25:34 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://bitbucket.org/skyblaise/testrepo-bitbucket.git...
+Feb 17, 2025 2:25:34 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/reposense/RepoSense.git...
-Feb 20, 2025 7:48:55 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code to complete...
-Feb 20, 2025 7:48:55 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:34 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/reposense/testrepo-Delta.git to complete...
-Feb 20, 2025 7:48:55 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:34 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/reposense/RepoSense.git to complete...
-Feb 20, 2025 7:48:55 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:34 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code to complete...
+Feb 17, 2025 2:25:34 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://bitbucket.org/skyblaise/testrepo-bitbucket.git to complete...
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Cloning of https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code completed!
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/reposense/testrepo-Alpha.git...
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/reposense/testrepo-Alpha.git to complete...
-Feb 20, 2025 7:48:56 AM reposense.report.ReportGenerator analyzeRepos
-INFO: [1/12] Analyzing https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master)...
-Feb 20, 2025 7:48:56 AM reposense.report.ReportGenerator updateRepoConfig
-INFO: https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master) does not contain a standalone config file.
-Feb 20, 2025 7:48:56 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
-INFO: Extracting relevant file info from https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master)...
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://bitbucket.org/skyblaise/testrepo-bitbucket.git completed!
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/reposense/testrepo-Empty.git...
-Feb 20, 2025 7:48:56 AM reposense.report.ReportGenerator analyzeRepos
-INFO: [2/12] Analyzing https://bitbucket.org/skyblaise/testrepo-bitbucket.git (master)...
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/reposense/testrepo-Empty.git to complete...
-Feb 20, 2025 7:48:56 AM reposense.report.ReportGenerator updateRepoConfig
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/reposense/testrepo-Alpha.git...
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/reposense/testrepo-Alpha.git to complete...
+Feb 17, 2025 2:25:35 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [1/12] Analyzing https://bitbucket.org/skyblaise/testrepo-bitbucket.git (master)...
+Feb 17, 2025 2:25:35 AM reposense.report.ReportGenerator updateRepoConfig
 INFO: https://bitbucket.org/skyblaise/testrepo-bitbucket.git (master) does not contain a standalone config file.
-Feb 20, 2025 7:48:56 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Feb 17, 2025 2:25:35 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://bitbucket.org/skyblaise/testrepo-bitbucket.git (master)...
-Feb 20, 2025 7:48:56 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Feb 17, 2025 2:25:35 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://bitbucket.org/skyblaise/testrepo-bitbucket.git (master)...
-Feb 20, 2025 7:48:56 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Feb 17, 2025 2:25:35 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://bitbucket.org/skyblaise/testrepo-bitbucket.git (master)...
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/reposense/testrepo-Alpha.git completed!
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from ftp://github.com/reposense/RepoSense.git...
-Feb 20, 2025 7:48:56 AM reposense.report.ReportGenerator analyzeRepos
-INFO: [3/12] Analyzing https://github.com/reposense/testrepo-Alpha.git (master)...
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of ftp://github.com/reposense/RepoSense.git to complete...
-Feb 20, 2025 7:48:56 AM reposense.report.ReportGenerator analyzeRepo
-INFO: Analysis of https://bitbucket.org/skyblaise/testrepo-bitbucket.git (master) completed!
-Feb 20, 2025 7:48:56 AM reposense.report.ReportGenerator updateRepoConfig
+Feb 17, 2025 2:25:35 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [2/12] Analyzing https://github.com/reposense/testrepo-Alpha.git (master)...
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/reposense/testrepo-Empty.git...
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/reposense/testrepo-Empty.git to complete...
+Feb 17, 2025 2:25:35 AM reposense.report.ReportGenerator updateRepoConfig
 WARNING: The provided commit hash, , contains illegal characters. Ignoring the config provided by https://github.com/reposense/testrepo-Alpha.git (master).
-Feb 20, 2025 7:48:56 AM reposense.report.ReportGenerator updateAuthorList
+Feb 17, 2025 2:25:35 AM reposense.report.ReportGenerator updateAuthorList
 INFO: https://github.com/reposense/testrepo-Alpha.git (master) has no authors specified, using all authors by default.
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:35 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/reposense/testrepo-Alpha.git (master)...
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/reposense/testrepo-Empty.git completed!
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner getClonedRepoLocation
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner getClonedRepoLocation
 WARNING: Exception met while trying to get current branch of https://github.com/reposense/testrepo-Empty.git (master), will skip this repo.
 reposense.git.exception.GitBranchException: Index 1 out of bounds for length 1
 	at reposense.git.GitBranch.getCurrentBranch(GitBranch.java:29)
@@ -92,61 +80,85 @@ reposense.git.exception.GitBranchException: Index 1 out of bounds for length 1
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner spawnCloneProcess
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from ftp://github.com/reposense/RepoSense.git...
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Cloning of https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code completed!
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of ftp://github.com/reposense/RepoSense.git to complete...
+Feb 17, 2025 2:25:35 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [3/12] Analyzing https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master)...
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://gitlab.com/reposense/testrepo-gitlab.git...
-Feb 20, 2025 7:48:56 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
-INFO: Extracting relevant file info from https://github.com/reposense/testrepo-Alpha.git (master)...
-Feb 20, 2025 7:48:56 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:35 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://gitlab.com/reposense/testrepo-gitlab.git to complete...
-Feb 20, 2025 7:48:57 AM reposense.commits.CommitInfoExtractor extractCommitInfos
-INFO: Extracting commits info for https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master)...
-Feb 20, 2025 7:48:57 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Feb 17, 2025 2:25:35 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master) does not contain a standalone config file.
+Feb 17, 2025 2:25:35 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master)...
+Feb 17, 2025 2:25:35 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/reposense/testrepo-Alpha.git (master)...
-Feb 20, 2025 7:48:57 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
-INFO: Analyzing commits info for https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master)...
-Feb 20, 2025 7:48:57 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Feb 17, 2025 2:25:35 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://bitbucket.org/skyblaise/testrepo-bitbucket.git (master) completed!
+Feb 17, 2025 2:25:35 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/reposense/testrepo-Alpha.git (master)...
-Feb 20, 2025 7:48:57 AM reposense.report.ReportGenerator analyzeRepo
+Feb 17, 2025 2:25:36 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/reposense/testrepo-Alpha.git (master) completed!
-Feb 20, 2025 7:48:57 AM reposense.report.ReportGenerator analyzeRepo
-INFO: Analysis of https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master) completed!
-Feb 20, 2025 7:48:57 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:36 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://gitlab.com/reposense/testrepo-gitlab.git completed!
-Feb 20, 2025 7:48:57 AM reposense.report.ReportGenerator analyzeRepos
-INFO: [4/12] Analyzing https://gitlab.com/reposense/testrepo-gitlab.git (main)...
-Feb 20, 2025 7:48:57 AM reposense.report.RepoCloner spawnCloneProcess
+Feb 17, 2025 2:25:36 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/reposense/testrepo-Beta.git...
-Feb 20, 2025 7:48:57 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:36 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [4/12] Analyzing https://gitlab.com/reposense/testrepo-gitlab.git (main)...
+Feb 17, 2025 2:25:36 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/reposense/testrepo-Beta.git to complete...
-Feb 20, 2025 7:48:57 AM reposense.report.ReportGenerator updateRepoConfig
+Feb 17, 2025 2:25:36 AM reposense.report.ReportGenerator updateRepoConfig
 INFO: https://gitlab.com/reposense/testrepo-gitlab.git (main) does not contain a standalone config file.
-Feb 20, 2025 7:48:57 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Feb 17, 2025 2:25:36 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://gitlab.com/reposense/testrepo-gitlab.git (main)...
-Feb 20, 2025 7:48:57 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:36 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/reposense/testrepo-Delta.git completed!
-Feb 20, 2025 7:48:57 AM reposense.commits.CommitInfoExtractor extractCommitInfos
-INFO: Extracting commits info for https://gitlab.com/reposense/testrepo-gitlab.git (main)...
-Feb 20, 2025 7:48:57 AM reposense.report.ReportGenerator analyzeRepos
+Feb 17, 2025 2:25:36 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [5/12] Analyzing https://github.com/reposense/testrepo-Delta.git (master)...
-Feb 20, 2025 7:48:57 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Feb 17, 2025 2:25:36 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://gitlab.com/reposense/testrepo-gitlab.git (main)...
+Feb 17, 2025 2:25:36 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://gitlab.com/reposense/testrepo-gitlab.git (main)...
-Feb 20, 2025 7:48:57 AM reposense.report.ReportGenerator analyzeRepo
+Feb 17, 2025 2:25:36 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://gitlab.com/reposense/testrepo-gitlab.git (main) completed!
-Feb 20, 2025 7:48:58 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Feb 17, 2025 2:25:36 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/reposense/testrepo-Delta.git (master)...
-Feb 20, 2025 7:48:59 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:36 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master)...
+Feb 17, 2025 2:25:37 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master)...
+Feb 17, 2025 2:25:37 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://tomluozhijie@git.code.sf.net/p/repo-sense-test-repo/code (master) completed!
+Feb 17, 2025 2:25:37 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/reposense/testrepo-Beta.git completed!
-Feb 20, 2025 7:48:59 AM reposense.report.ReportGenerator analyzeRepos
+Feb 17, 2025 2:25:37 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [6/12] Analyzing https://github.com/reposense/testrepo-Beta.git (master)...
-Feb 20, 2025 7:48:59 AM reposense.report.ReportGenerator updateRepoConfig
+Feb 17, 2025 2:25:37 AM reposense.report.ReportGenerator updateRepoConfig
 INFO: Ignoring standalone config file in https://github.com/reposense/testrepo-Beta.git (master).
-Feb 20, 2025 7:48:59 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Feb 17, 2025 2:25:37 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/reposense/testrepo-Beta.git (master)...
-Feb 20, 2025 7:48:59 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:25:37 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+INFO: Extracting commits info for https://github.com/reposense/testrepo-Beta.git (master)...
+Feb 17, 2025 2:25:38 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/reposense/testrepo-Beta.git (master)...
+Feb 17, 2025 2:25:38 AM reposense.report.ReportGenerator analyzeRepo
+INFO: Analysis of https://github.com/reposense/testrepo-Beta.git (master) completed!
+Feb 17, 2025 2:25:38 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [7/12] Analyzing https://github.com/reposense/testrepo-Beta.git (add-config-json)...
+Feb 17, 2025 2:25:38 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: Ignoring standalone config file in https://github.com/reposense/testrepo-Beta.git (add-config-json).
+Feb 17, 2025 2:25:38 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/reposense/testrepo-Beta.git (add-config-json)...
+Feb 17, 2025 2:25:38 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "reposense/RepoSense[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/reposense/RepoSense.git' 'repos/reposense_RepoSense/RepoSense_bare' on path . :
 Cloning into bare repository 'repos/reposense_RepoSense/RepoSense_bare'...
-fatal: could not open '/home/runner/work/RepoSense/RepoSense/repos/reposense_RepoSense/RepoSense_bare/objects/pack/tmp_pack_IGjnoF' for reading: No such file or directory
+fatal: could not open '/home/runner/work/RepoSense/RepoSense/repos/reposense_RepoSense/RepoSense_bare/objects/pack/tmp_pack_FxO4LO' for reading: No such file or directory
 fatal: fetch-pack: invalid index-pack output
 
 	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
@@ -159,33 +171,21 @@ fatal: fetch-pack: invalid index-pack output
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 20, 2025 7:48:59 AM reposense.commits.CommitInfoExtractor extractCommitInfos
-INFO: Extracting commits info for https://github.com/reposense/testrepo-Beta.git (master)...
-Feb 20, 2025 7:49:00 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
-INFO: Analyzing commits info for https://github.com/reposense/testrepo-Beta.git (master)...
-Feb 20, 2025 7:49:00 AM reposense.report.ReportGenerator analyzeRepo
-INFO: Analysis of https://github.com/reposense/testrepo-Beta.git (master) completed!
-Feb 20, 2025 7:49:00 AM reposense.report.ReportGenerator analyzeRepos
-INFO: [7/12] Analyzing https://github.com/reposense/testrepo-Beta.git (add-config-json)...
-Feb 20, 2025 7:49:00 AM reposense.report.ReportGenerator updateRepoConfig
-INFO: Ignoring standalone config file in https://github.com/reposense/testrepo-Beta.git (add-config-json).
-Feb 20, 2025 7:49:00 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
-INFO: Extracting relevant file info from https://github.com/reposense/testrepo-Beta.git (add-config-json)...
-Feb 20, 2025 7:49:00 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Feb 17, 2025 2:25:39 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/reposense/testrepo-Beta.git (add-config-json)...
-Feb 20, 2025 7:49:00 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Feb 17, 2025 2:25:39 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/reposense/testrepo-Beta.git (add-config-json)...
-Feb 20, 2025 7:49:00 AM reposense.report.ReportGenerator analyzeRepo
+Feb 17, 2025 2:25:39 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/reposense/testrepo-Beta.git (add-config-json) completed!
-Feb 20, 2025 7:49:02 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Feb 17, 2025 2:25:41 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/reposense/testrepo-Delta.git (master)...
-Feb 20, 2025 7:49:02 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Feb 17, 2025 2:25:41 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/reposense/testrepo-Delta.git (master)...
-Feb 20, 2025 7:49:02 AM reposense.report.ReportGenerator analyzeRepo
+Feb 17, 2025 2:25:41 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/reposense/testrepo-Delta.git (master) completed!
-Feb 20, 2025 7:49:02 AM reposense.report.ReportGenerator analyzeRepos
+Feb 17, 2025 2:25:41 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [8/12] Analyzing https://github.com/reposense/testrepo-Delta.git (nonExistentBranch)...
-Feb 20, 2025 7:49:02 AM reposense.report.ReportGenerator analyzeRepos
+Feb 17, 2025 2:25:41 AM reposense.report.ReportGenerator analyzeRepos
 SEVERE: Branch nonExistentBranch does not exist in https://github.com/reposense/testrepo-Delta.git! Analysis terminated.
 reposense.git.exception.GitBranchException: reposense.system.CommandRunnerProcessException: Error returned from command git rev-parse --verify nonExistentBranch on path repos/reposense_testrepo-Delta/testrepo-Delta_bare :
 fatal: Needed a single revision
@@ -199,21 +199,21 @@ fatal: Needed a single revision
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 20, 2025 7:49:02 AM reposense.report.ReportGenerator analyzeRepos
+Feb 17, 2025 2:25:41 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [9/12] Analyzing https://github.com/reposense/testrepo-Delta.git (add-binary-file)...
-Feb 20, 2025 7:49:03 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Feb 17, 2025 2:25:42 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/reposense/testrepo-Delta.git (add-binary-file)...
-Feb 20, 2025 7:49:09 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Feb 17, 2025 2:25:48 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/reposense/testrepo-Delta.git (add-binary-file)...
-Feb 20, 2025 7:49:09 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Feb 17, 2025 2:25:48 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/reposense/testrepo-Delta.git (add-binary-file)...
-Feb 20, 2025 7:49:09 AM reposense.report.ReportGenerator analyzeRepo
+Feb 17, 2025 2:25:48 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/reposense/testrepo-Delta.git (add-binary-file) completed!
-Feb 20, 2025 7:51:12 AM reposense.report.RepoCloner waitForCloneProcess
+Feb 17, 2025 2:27:49 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "reposense/RepoSense[master]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'ftp://github.com/reposense/RepoSense.git' 'repos/reposense_RepoSense/RepoSense_bare' on path . :
 Cloning into bare repository 'repos/reposense_RepoSense/RepoSense_bare'...
-fatal: unable to access 'ftp://github.com/reposense/RepoSense.git/': Failed to connect to github.com port 21 after 135363 ms: Couldn't connect to server
+fatal: unable to access 'ftp://github.com/reposense/RepoSense.git/': Failed to connect to github.com port 21 after 133911 ms: Couldn't connect to server
 
 	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
 	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
@@ -225,7 +225,7 @@ fatal: unable to access 'ftp://github.com/reposense/RepoSense.git/': Failed to c
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Feb 20, 2025 7:51:12 AM reposense.report.ReportGenerator generateReposReport
+Feb 17, 2025 2:27:49 AM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/RepoSense/RepoSense/reposense-report
-Feb 20, 2025 7:51:12 AM reposense.RepoSense main
-INFO: Elapsed processing time: 2 minute(s) 16.85 second(s)
+Feb 17, 2025 2:27:49 AM reposense.RepoSense main
+INFO: Elapsed processing time: 2 minute(s) 15.18 second(s)
