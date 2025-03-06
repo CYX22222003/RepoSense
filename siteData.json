@@ -93,7 +93,8 @@
         "github-pages": "GitHub Pages",
         "stale-pull-requests": "Stale pull requests",
         "codecov": "Codecov",
-        "surge-sh": "Surge.sh"
+        "surge-sh": "Surge.sh",
+        "post-deployment-test": "Post-deployment test"
       },
       "headingKeywords": {}
     },
@@ -254,6 +255,7 @@
         "originality-threshold-ot": "--originality-threshold, -ot",
         "output-o": "--output, -o",
         "period-p": "--period, -p",
+        "portfolio-p": "--portfolio, -P",
         "repo-repos-r": "--repo, --repos, -r",
         "shallow-cloning-s": "--shallow-cloning, -S",
         "since-s": "--since, -s",
