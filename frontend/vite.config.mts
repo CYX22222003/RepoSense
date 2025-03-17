@@ -6,7 +6,7 @@ import path from 'path';
 
 // VITE_BASE_DIR refers to the root directory of the RepoSense deployment.
 // It needs to be configured for GitHub Pages deployment.
-const base = process.env.VITE_BASE_DIR
+const base = ""
   ? process.env.VITE_BASE_DIR
   : '';
 
