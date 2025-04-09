@@ -10,8 +10,9 @@ import java.util.logging.Logger;
 
 import net.sourceforge.argparse4j.helper.HelpScreenException;
 import reposense.git.GitConfig;
-import reposense.model.BlurbMap;
+import reposense.model.AuthorBlurbMap;
 import reposense.model.CliArguments;
+import reposense.model.RepoBlurbMap;
 import reposense.model.RepoConfiguration;
 import reposense.model.ReportConfiguration;
 import reposense.model.RunConfigurationDecider;
@@ -45,7 +46,8 @@ public class RepoSense {
             CliArguments cliArguments = ArgsParser.parse(args);
             List<RepoConfiguration> configs = null;
             ReportConfiguration reportConfig = new ReportConfiguration();
-            BlurbMap blurbMap = new BlurbMap();
+            RepoBlurbMap repoBlurbMap = new RepoBlurbMap();
+            AuthorBlurbMap authorBlurbMap = new AuthorBlurbMap();
 
             if (cliArguments.isViewModeOnly()) {
                 ReportServer.startServer(SERVER_PORT_NUMBER, cliArguments.getReportDirectoryPath().toAbsolutePath());
@@ -54,7 +56,8 @@ public class RepoSense {
 
             configs = RunConfigurationDecider.getRunConfiguration(cliArguments).getRepoConfigurations();
             reportConfig = cliArguments.getReportConfiguration();
-            blurbMap = cliArguments.getBlurbMap();
+            repoBlurbMap = cliArguments.getRepoBlurbMap();
+            authorBlurbMap = cliArguments.getAuthorBlurbMap();
 
             RepoConfiguration.setFormatsToRepoConfigs(configs, cliArguments.getFormats());
             RepoConfiguration.setDatesToRepoConfigs(configs, cliArguments.getSinceDate(), cliArguments.getUntilDate());
@@ -78,14 +81,14 @@ public class RepoSense {
             ReportGenerator reportGenerator = new ReportGenerator();
             List<Path> reportFoldersAndFiles = reportGenerator.generateReposReport(configs,
                     cliArguments.getOutputFilePath().toAbsolutePath().toString(),
-                    cliArguments.getAssetsFilePath().toAbsolutePath().toString(), reportConfig,
+                    cliArguments.getConfigFolderPath().toAbsolutePath().toString(), reportConfig,
                     formatter.format(ZonedDateTime.now(cliArguments.getZoneId())),
                     cliArguments.getSinceDate(), cliArguments.getUntilDate(),
                     cliArguments.isSinceDateProvided(), cliArguments.isUntilDateProvided(),
                     cliArguments.getNumCloningThreads(), cliArguments.getNumAnalysisThreads(),
                     TimeUtil::getElapsedTime, cliArguments.getZoneId(), cliArguments.isFreshClonePerformed(),
                     cliArguments.isAuthorshipAnalyzed(), cliArguments.getOriginalityThreshold(),
-                    blurbMap, cliArguments.isPortfolio()
+                    repoBlurbMap, authorBlurbMap, cliArguments.isPortfolio()
             );
 
             FileUtil.zipFoldersAndFiles(reportFoldersAndFiles, cliArguments.getOutputFilePath().toAbsolutePath(),

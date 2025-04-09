@@ -20,7 +20,6 @@ public class CliArguments {
     private static final Path EMPTY_PATH = Paths.get("");
 
     private Path outputFilePath;
-    private Path assetsFilePath;
     private LocalDateTime sinceDate;
     private LocalDateTime untilDate;
     private boolean isSinceDateProvided;
@@ -51,7 +50,8 @@ public class CliArguments {
     private Path groupConfigFilePath;
     private Path reportConfigFilePath;
     private ReportConfiguration reportConfiguration;
-    private BlurbMap blurbMap;
+    private RepoBlurbMap repoBlurbMap;
+    private AuthorBlurbMap authorBlurbMap;
 
     /**
      * Constructs a {@code CliArguments} object without any parameters.
@@ -64,10 +64,6 @@ public class CliArguments {
 
     public Path getOutputFilePath() {
         return outputFilePath;
-    }
-
-    public Path getAssetsFilePath() {
-        return assetsFilePath;
     }
 
     public LocalDateTime getSinceDate() {
@@ -158,8 +154,12 @@ public class CliArguments {
         return reportConfiguration;
     }
 
-    public BlurbMap getBlurbMap() {
-        return blurbMap;
+    public RepoBlurbMap getRepoBlurbMap() {
+        return repoBlurbMap;
+    }
+
+    public AuthorBlurbMap getAuthorBlurbMap() {
+        return authorBlurbMap;
     }
 
     public boolean isViewModeOnly() {
@@ -215,7 +215,8 @@ public class CliArguments {
                 && Objects.equals(this.authorConfigFilePath, otherCliArguments.authorConfigFilePath)
                 && Objects.equals(this.groupConfigFilePath, otherCliArguments.groupConfigFilePath)
                 && Objects.equals(this.reportConfigFilePath, otherCliArguments.reportConfigFilePath)
-                && Objects.equals(this.blurbMap, otherCliArguments.blurbMap)
+                && Objects.equals(this.repoBlurbMap, otherCliArguments.repoBlurbMap)
+                && Objects.equals(this.authorBlurbMap, otherCliArguments.authorBlurbMap)
                 && this.isAuthorshipAnalyzed == otherCliArguments.isAuthorshipAnalyzed
                 && Objects.equals(this.originalityThreshold, otherCliArguments.originalityThreshold)
                 && this.isPortfolio == otherCliArguments.isPortfolio;
@@ -238,16 +239,6 @@ public class CliArguments {
          */
         public Builder outputFilePath(Path outputFilePath) {
             this.cliArguments.outputFilePath = outputFilePath;
-            return this;
-        }
-
-        /**
-         * Adds the {@code assetsFilePath} to CliArguments.
-         *
-         * @param assetsFilePath The assets file path.
-         */
-        public Builder assetsFilePath(Path assetsFilePath) {
-            this.cliArguments.assetsFilePath = assetsFilePath;
             return this;
         }
 
@@ -484,12 +475,18 @@ public class CliArguments {
         }
 
         /**
-         * Adds the {@code blurbMap} to CliArguments.
-         *
-         * @param blurbMap The blurb map.
+         * Adds the {@code repoBlurbMap} to CliArguments.
          */
-        public Builder blurbMap(BlurbMap blurbMap) {
-            this.cliArguments.blurbMap = blurbMap;
+        public Builder repoBlurbMap(RepoBlurbMap repoBlurbMap) {
+            this.cliArguments.repoBlurbMap = repoBlurbMap;
+            return this;
+        }
+
+        /**
+         * Adds the {@code authorBlurbMap} to CliArguments.
+         */
+        public Builder authorBlurbMap(AuthorBlurbMap authorBlurbMap) {
+            this.cliArguments.authorBlurbMap = authorBlurbMap;
             return this;
         }
 

@@ -24,15 +24,15 @@ import net.sourceforge.argparse4j.inf.FeatureControl;
 import net.sourceforge.argparse4j.inf.MutuallyExclusiveGroup;
 import net.sourceforge.argparse4j.inf.Namespace;
 import reposense.RepoSense;
-import reposense.model.BlurbMap;
+import reposense.model.AuthorBlurbMap;
 import reposense.model.CliArguments;
 import reposense.model.FileType;
+import reposense.model.RepoBlurbMap;
 import reposense.model.ReportConfiguration;
 import reposense.parser.exceptions.InvalidMarkdownException;
 import reposense.parser.exceptions.ParseException;
 import reposense.parser.types.AlphanumericArgumentType;
 import reposense.parser.types.AnalysisThreadsArgumentType;
-import reposense.parser.types.AssetsFolderArgumentType;
 import reposense.parser.types.CloningThreadsArgumentType;
 import reposense.parser.types.ConfigFolderArgumentType;
 import reposense.parser.types.OutputFolderArgumentType;
@@ -59,7 +59,6 @@ public class ArgsParser {
     public static final String[] REPO_FLAGS = new String[] {"--repo", "--repos", "-r"};
     public static final String[] VIEW_FLAGS = new String[] {"--view", "-v"};
     public static final String[] OUTPUT_FLAGS = new String[] {"--output", "-o"};
-    public static final String[] ASSETS_FLAGS = new String[] {"--assets", "-a"};
     public static final String[] SINCE_FLAGS = new String[] {"--since", "-s"};
     public static final String[] UNTIL_FLAGS = new String[] {"--until", "-u"};
     public static final String[] PERIOD_FLAGS = new String[] {"--period", "-p"};
@@ -155,14 +154,6 @@ public class ArgsParser {
                 .setDefault(Paths.get(ArgsParser.DEFAULT_REPORT_NAME))
                 .help("The directory to output the report folder, reposense-report. "
                         + "If not provided, the report folder will be created in the current working directory.");
-
-        parser.addArgument(ASSETS_FLAGS)
-                .dest(ASSETS_FLAGS[0])
-                .metavar("PATH")
-                .type(new AssetsFolderArgumentType())
-                .setDefault(DEFAULT_ASSETS_PATH)
-                .help("The directory to place assets files to customize report generation. "
-                        + "If not provided, the assets folder in the current working directory will be used.");
 
         parser.addArgument(SINCE_FLAGS)
                 .dest(SINCE_FLAGS[0])
@@ -303,7 +294,6 @@ public class ArgsParser {
         Path reportFolderPath = results.get(VIEW_FLAGS[0]);
         Path outputFolderPath = results.get(OUTPUT_FLAGS[0]);
         ZoneId zoneId = results.get(TIMEZONE_FLAGS[0]);
-        Path assetsFolderPath = results.get(ASSETS_FLAGS[0]);
         List<String> locations = results.get(REPO_FLAGS[0]);
         List<FileType> formats = FileType.convertFormatStringsToFileTypes(results.get(FORMAT_FLAGS[0]));
         boolean isStandaloneConfigIgnored = results.get(IGNORE_CONFIG_FLAGS[0]);
@@ -323,7 +313,6 @@ public class ArgsParser {
                 .reportDirectoryPath(reportFolderPath)
                 .outputFilePath(outputFolderPath)
                 .zoneId(zoneId)
-                .assetsFilePath(assetsFolderPath)
                 .locations(locations)
                 .formats(formats)
                 .isStandaloneConfigIgnored(isStandaloneConfigIgnored)
@@ -345,7 +334,8 @@ public class ArgsParser {
         }
 
         addReportConfigToBuilder(cliArgumentsBuilder, results);
-        addBlurbMapToBuilder(cliArgumentsBuilder, results);
+        addRepoBlurbMapToBuilder(cliArgumentsBuilder, results);
+        addAuthorBlurbMapToBuilder(cliArgumentsBuilder, results);
         addAnalysisDatesToBuilder(cliArgumentsBuilder, results);
 
         boolean isViewModeOnly = reportFolderPath != null
@@ -393,20 +383,20 @@ public class ArgsParser {
     }
 
     /**
-     * Adds the blurbMap field to the given {@code builder}.
+     * Adds the repoblurbMap field to the given {@code builder}.
      *
      * @param builder Builder to be supplied with the reportConfig field.
      * @param results Parsed results of the user-supplied CLI arguments.
      */
-    private static void addBlurbMapToBuilder(CliArguments.Builder builder, Namespace results) {
-        BlurbMap blurbMap = new BlurbMap();
+    private static void addRepoBlurbMapToBuilder(CliArguments.Builder builder, Namespace results) {
+        RepoBlurbMap repoBlurbMap = new RepoBlurbMap();
         Path configFolderPath = results.get(CONFIG_FLAGS[0]);
 
         // Blurbs are parsed regardless
-        Path blurbConfigPath = configFolderPath.resolve(BlurbMarkdownParser.DEFAULT_BLURB_FILENAME);
+        Path blurbConfigPath = configFolderPath.resolve(RepoBlurbMarkdownParser.DEFAULT_BLURB_FILENAME);
 
         try {
-            blurbMap = new BlurbMarkdownParser(blurbConfigPath).parse();
+            repoBlurbMap = new RepoBlurbMarkdownParser(blurbConfigPath).parse();
         } catch (InvalidMarkdownException ex) {
             logger.warning(String.format(MESSAGE_INVALID_MARKDOWN_BLURBS, ex.getMessage()));
         } catch (IOException ioe) {
@@ -414,7 +404,32 @@ public class ArgsParser {
             // Ignore exception as the file is optional.
         }
 
-        builder.blurbMap(blurbMap);
+        builder.repoBlurbMap(repoBlurbMap);
+    }
+
+    /**
+     * Adds the authorblurbMap field to the given {@code builder}.
+     *
+     * @param builder Builder to be supplied with the reportConfig field.
+     * @param results Parsed results of the user-supplied CLI arguments.
+     */
+    private static void addAuthorBlurbMapToBuilder(CliArguments.Builder builder, Namespace results) {
+        AuthorBlurbMap authorBlurbMap = new AuthorBlurbMap();
+        Path configFolderPath = results.get(CONFIG_FLAGS[0]);
+
+        // Blurbs are parsed regardless
+        Path blurbConfigPath = configFolderPath.resolve(AuthorBlurbMarkdownParser.DEFAULT_BLURB_FILENAME);
+
+        try {
+            authorBlurbMap = new AuthorBlurbMarkdownParser(blurbConfigPath).parse();
+        } catch (InvalidMarkdownException ex) {
+            logger.warning(String.format(MESSAGE_INVALID_MARKDOWN_BLURBS, ex.getMessage()));
+        } catch (IOException ioe) {
+            // IOException thrown as blurbs.md is not found.
+            // Ignore exception as the file is optional.
+        }
+
+        builder.authorBlurbMap(authorBlurbMap);
     }
 
     /**
@@ -446,7 +461,7 @@ public class ArgsParser {
         LocalDateTime currentDate = TimeUtil.getCurrentDate(zoneId);
 
         if (isSinceDateProvided) {
-            sinceDate = TimeUtil.getSinceDate(cliSinceDate.get());
+            sinceDate = TimeUtil.getValidDate(cliSinceDate.get());
             // For --since d1, need to adjust the arbitrary date based on timezone
             if (TimeUtil.isEqualToArbitraryFirstDateUtc(sinceDate)) {
                 isUsingArbitraryDate = true;
@@ -467,7 +482,7 @@ public class ArgsParser {
         }
 
         if (isUntilDateProvided) {
-            untilDate = TimeUtil.getUntilDate(cliUntilDate.get());
+            untilDate = TimeUtil.getValidDate(cliUntilDate.get());
         } else {
             untilDate = (isSinceDateProvided && isPeriodProvided)
                     ? TimeUtil.getDatePlusNDays(cliSinceDate.get(), cliPeriod.get())
